@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+
+# Created automatically at runtime
+students.data
+
+# Per-member hand-off packages (not part of the project)
+handoff/

@@ -33,9 +33,10 @@ class AdminController:
         students = self.database.read_students()
         if not students:
             print(f"{INDENT}\t< Nothing to Display >")
-            return
+            return students
         for student in students:
             print(f"{INDENT}{student}")
+        return students
 
     def group_students(self):
         print(yellow(f"{INDENT}Grade Grouping"))
@@ -60,6 +61,8 @@ class AdminController:
         print(f"{INDENT}PASS --> [{passed}]")
 
     def remove_student(self):
+        if not self.show_students():
+            return
         student_id = input(f"{INDENT}Remove by ID: ").strip()
         if student_id.isdigit():
             student_id = student_id.zfill(6)

@@ -4,12 +4,10 @@ from models.subject import Subject
 
 
 class EnrolmentError(Exception):
-    """Raised when a student tries to enrol in more than the allowed subjects."""
+    pass
 
 
 class Student:
-    """A registered student and the subjects they are enrolled in."""
-
     MAX_SUBJECTS = 4
     PASS_MARK = 50
 
@@ -22,7 +20,6 @@ class Student:
 
     @staticmethod
     def generate_id(existing_ids=()):
-        """Returns a unique 6-digit id between 000001 and 999999."""
         while True:
             new_id = f"{random.randint(1, 999999):06d}"
             if new_id not in existing_ids:
@@ -39,7 +36,6 @@ class Student:
         return subject
 
     def remove_subject(self, subject_id):
-        """Removes the subject with the given id. Returns True if it was found."""
         for subject in self.subjects:
             if subject.id == subject_id:
                 self.subjects.remove(subject)
@@ -61,7 +57,6 @@ class Student:
         return self.average_mark() >= Student.PASS_MARK
 
     def summary(self):
-        """Format used by the admin grouping and partition output."""
         return f"{self.name} :: {self.id} --> GRADE: {self.grade():>2} - MARK: {self.average_mark():.2f}"
 
     def __str__(self):

@@ -7,8 +7,6 @@ from models.student import EnrolmentError, Student
 
 
 class EnrolmentWindow(tk.Toplevel):
-    """Lets a logged-in student enrol in up to four subjects."""
-
     def __init__(self, login_window, database, student):
         super().__init__(login_window)
         self.login_window = login_window

@@ -7,8 +7,6 @@ INDENT = "\t"
 
 
 class StudentController:
-    """Student System menu: login and register."""
-
     def __init__(self, database):
         self.database = database
 
@@ -25,7 +23,6 @@ class StudentController:
                 print(red(f"{INDENT}Invalid option, please choose l, r or x"))
 
     def read_credentials(self):
-        """Prompts until the email and password match the required formats."""
         while True:
             email = input(f"{INDENT}Email: ").strip()
             password = input(f"{INDENT}Password: ").strip()

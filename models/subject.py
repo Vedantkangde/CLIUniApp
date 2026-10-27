@@ -2,8 +2,6 @@ import random
 
 
 class Subject:
-    """A subject a student is enrolled in, with a random mark and its grade."""
-
     MIN_MARK = 25
     MAX_MARK = 100
 
@@ -14,7 +12,6 @@ class Subject:
 
     @staticmethod
     def generate_id(existing_ids=()):
-        """Returns a unique 3-digit id between 001 and 999."""
         while True:
             new_id = f"{random.randint(1, 999):03d}"
             if new_id not in existing_ids:

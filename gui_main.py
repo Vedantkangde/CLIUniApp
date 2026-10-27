@@ -1,4 +1,3 @@
-"""GUIUniApp entry point: python3 gui_main.py"""
 from gui.login_window import LoginWindow
 
 

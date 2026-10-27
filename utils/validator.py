@@ -1,11 +1,7 @@
-"""Regular expressions used to validate student credentials."""
 import re
 
-# firstname.lastname@university.com
 EMAIL_PATTERN = r"^[A-Za-z]+\.[A-Za-z]+@university\.com$"
 
-# Starts with an upper-case letter, has at least five more letters,
-# and ends with three or more digits (e.g. Helloworld123)
 PASSWORD_PATTERN = r"^[A-Z][A-Za-z]{5,}[0-9]{3,}$"
 
 

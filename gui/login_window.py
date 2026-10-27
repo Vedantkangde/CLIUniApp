@@ -8,8 +8,6 @@ from utils.validator import is_valid_email, is_valid_password
 
 
 class LoginWindow(tk.Tk):
-    """Main window of GUIUniApp. Registered students are read from students.data."""
-
     def __init__(self):
         super().__init__()
         self.database = Database()
@@ -37,7 +35,6 @@ class LoginWindow(tk.Tk):
         self.bind("<Return>", lambda _event: self.login())
         self.email_entry.focus_set()
 
-        # Bring the window to the front on launch (macOS can open it behind other apps)
         self.lift()
         self.attributes("-topmost", True)
         self.after(300, lambda: self.attributes("-topmost", False))
@@ -71,7 +68,6 @@ class LoginWindow(tk.Tk):
         EnrolmentWindow(self, self.database, student)
 
     def show(self):
-        """Shows the login window again after a student logs out."""
         self.password_entry.delete(0, "end")
         self.deiconify()
         self.email_entry.focus_set()

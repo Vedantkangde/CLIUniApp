@@ -6,8 +6,6 @@ INDENT = "\t\t"
 
 
 class SubjectController:
-    """Subject Enrolment System menu for a logged-in student."""
-
     def __init__(self, database, student):
         self.database = database
         self.student = student

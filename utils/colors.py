@@ -1,7 +1,5 @@
-"""ANSI colour helpers used to match the colours in the sample I/O."""
 import os
 
-# Enables ANSI escape codes in the Windows terminal (no effect elsewhere)
 if os.name == "nt":
     os.system("")
 

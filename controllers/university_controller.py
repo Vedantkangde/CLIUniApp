@@ -5,8 +5,6 @@ from utils.colors import cyan, red, yellow
 
 
 class UniversityController:
-    """Top-level menu that navigates between the Admin and Student subsystems."""
-
     def __init__(self):
         self.database = Database()
 

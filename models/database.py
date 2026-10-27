@@ -1,7 +1,6 @@
 import os
 import pickle
 
-# students.data lives in the project root so the CLI and GUI share the same file
 DATA_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "students.data")
 
 
@@ -21,7 +20,6 @@ class Database:
                 students = pickle.load(file)
                 return students if isinstance(students, list) else []
         except (EOFError, pickle.UnpicklingError, AttributeError, ImportError):
-            # An empty or corrupted file is treated as an empty database
             return []
 
     def write_students(self, students):

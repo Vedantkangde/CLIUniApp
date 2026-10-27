@@ -1,4 +1,3 @@
-"""CLIUniApp entry point: python3 main.py"""
 from controllers.university_controller import UniversityController
 from utils.colors import yellow
 

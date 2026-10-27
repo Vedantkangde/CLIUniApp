@@ -5,8 +5,6 @@ GRADE_ORDER = ["HD", "D", "C", "P", "Z"]
 
 
 class AdminController:
-    """Admin System menu. Admins already exist and don't need to log in."""
-
     def __init__(self, database):
         self.database = database
 

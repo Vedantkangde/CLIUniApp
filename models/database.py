@@ -6,14 +6,11 @@ DATA_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 
 
 class Database:
-    """Reads and writes Student objects to and from students.data."""
-
     def __init__(self, path=DATA_FILE):
         self.path = path
         self.ensure_file()
 
     def ensure_file(self):
-        """Creates students.data with an empty student list if it doesn't exist."""
         if not os.path.exists(self.path):
             self.write_students([])
 
@@ -60,7 +57,6 @@ class Database:
         self.write_students(students)
 
     def remove_student(self, student_id):
-        """Removes the student with the given id. Returns True if it was found."""
         students = self.read_students()
         remaining = [s for s in students if s.id != student_id]
         if len(remaining) == len(students):

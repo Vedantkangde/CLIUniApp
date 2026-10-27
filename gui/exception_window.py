@@ -3,8 +3,6 @@ from tkinter import ttk
 
 
 class ExceptionWindow(tk.Toplevel):
-    """Modal window that notifies the user of an error."""
-
     def __init__(self, parent, title, message):
         super().__init__(parent)
         self.title(title)

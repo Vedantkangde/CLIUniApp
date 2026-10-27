@@ -5,8 +5,6 @@ from models.student import Student
 
 
 class SubjectWindow(tk.Toplevel):
-    """Lists the logged-in student's enrolled subjects with marks and grades."""
-
     def __init__(self, parent, student):
         super().__init__(parent)
         self.student = student
